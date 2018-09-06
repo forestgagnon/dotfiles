@@ -1,0 +1,93 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+###HTML###
+
+########## Comments ##########
+'*':
+  'Hash Comment':
+    'prefix': 'hcmt'
+    'body': '########## $1 ##########'
+
+  'Slash Comment':
+    'prefix': 'scmt'
+    'body': '//========== $1 ==========\\\\\\\\'
+
+  'Hash Mega Comment':
+    'prefix':'hmcmt'
+    'body': """
+    ###############################################################$2
+    ############################## $1 ###############################
+    ###############################################################$2
+    """
+
+  'Slash Mega Comment':
+    'prefix':'smcmt'
+    'body': """
+    // =========================================================$2 \\\\\\\\
+    // ========================== $1 ============================= \\\\\\\\
+    // =========================================================$2 \\\\\\\\
+    """
+
+'.source.js, .source.jsx':
+  ########## JS COMMENTS ##########
+  'Header Comment':
+    'prefix': 'headercmt'
+    'body': '/* $1 */'
+  'TODO Comment':
+    'prefix': 'todo'
+    'body': '// TODO'
+  ########## JS FUNCTIONS ##########
+  'Console Log':
+    'prefix': 'clog'
+    'body': 'console.log($1);'
+  'Import':
+    'prefix': 'import'
+    'body': 'import $1 from \'$2\';'
+  ########## REACT ##########
+  'React Component':
+    'prefix': 'reactcomponent'
+    'body': """
+    const ${1:MyComponent} = React.createClass({
+      render() {
+        return (
+          <div>
+
+          </div>
+        );
+      },
+    });
+
+    export default ${1:MyComponent};
+
+    """
+
+
+'.text.html':
+  'HTML Comment':
+    'prefix': 'htmlcmt'
+    'body': '<!-- $1 -->'
+
+# '*.*spec.rb':
+#   'it':
+#     'prefix': 'it!'
+#     'body': 'gsdfg'

@@ -1,0 +1,102 @@
+# Your keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts. Unlike style sheets however,
+# each selector can only be declared once.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'cmd-shift-p': 'core:move-up'
+#   'cmd-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * https://atom.io/docs/latest/using-atom-basic-customization#customizing-key-bindings
+# * https://atom.io/docs/latest/behind-atom-keymaps-in-depth
+#
+# If you're having trouble with your keybindings not working, try the
+# Keybinding Resolver: `Cmd+.` on OS X and `cmd+.` on other platforms. See the
+# Debugging Guide for more information:
+# * https://atom.io/docs/latest/hacking-atom-debugging#check-the-keybindings
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+'atom-workspace atom-text-editor:not([mini])':
+  'alt-r': 'tree-view:rename'
+  'cmd-R': 'toggler:toggle'
+  'cmd-shift-backspace': 'editor:delete-line'
+  'cmd-shift-insert': 'editor:toggle-soft-wrap'
+  'cmd-shift-help': 'editor:toggle-soft-wrap'
+  'ctrl-M': 'bracket-matcher:select-inside-brackets'
+  'cmd-alt-m': 'markdown-preview:toggle'
+  'alt-W': 'editor:select-word'
+  'cmd-left': 'editor:move-to-beginning-of-word'
+  'cmd-right': 'editor:move-to-end-of-word'
+  'cmd-shift-left': 'editor:select-to-beginning-of-word'
+  'cmd-shift-right': 'editor:select-to-end-of-word'
+  'alt-left': 'editor:move-to-previous-subword-boundary'
+  'alt-right': 'editor:move-to-next-subword-boundary'
+  'cmd-home': 'core:move-to-top'
+  'cmd-end': 'core:move-to-bottom'
+  'cmd-up': 'editor:move-line-up'
+  'cmd-down': 'editor:move-line-down'
+  'cmd-backspace': 'editor:delete-to-beginning-of-word'
+  'cmd-delete': 'editor:delete-to-end-of-word'
+  'alt-backspace': 'editor:delete-to-beginning-of-subword'
+  'alt-delete': 'editor:delete-to-end-of-subword'
+  'cmd-shift-up': 'editor:add-selection-above'
+  'cmd-shift-down': 'editor:add-selection-below'
+  'cmd-shift-f5': 'sort-lines:sort'
+
+  'shift-alt-left': 'editor:select-to-previous-subword-boundary'
+  'shift-alt-right': 'editor:select-to-next-subword-boundary'
+
+  'cmd-> cmd-C': 'change-case:camel'
+  'cmd-> cmd-S': 'change-case:snake'
+  'cmd-> cmd-T': 'change-case:title'
+  'cmd-> cmd-U': 'change-case:upper'
+  'cmd-> cmd-L': 'change-case:lower'
+  'cmd-> cmd-N': 'change-case:sentence'
+  'cmd-> cmd-K': 'change-case:constant'
+#
+  'alt-a': 'find-and-replace:find-previous-selected'
+  'alt-s': 'find-and-replace:find-next-selected'
+
+  'alt-cmd-down': 'goto-definition:go'
+
+'atom-workspace atom-text-editor atom-text-editor:not([mini]),
+atom-workspace atom-text-editor,
+atom-workspace':
+  'cmd-alt-]': 'pane:split-right'
+  'cmd-alt-[': 'pane:split-down'
+  'cmd-}': 'pane:split-right-and-move-active-item'
+  'cmd-{': 'pane:split-down-and-move-active-item'
+  'cmd-alt-[': 'pane:split-down'
+  'ctrl-alt-right': 'window:focus-pane-on-right'
+  'ctrl-alt-left': 'window:focus-pane-on-left'
+  'ctrl-alt-up': 'window:focus-pane-above'
+  'ctrl-alt-down': 'window:focus-pane-below'
+
+  'cmd-shift-alt-right': 'window:move-active-item-to-pane-on-right'
+  'cmd-shift-alt-left': 'window:move-active-item-to-pane-on-left'
+  'cmd-shift-alt-up': 'window:move-active-item-to-pane-above'
+  'cmd-shift-alt-down': 'window:move-active-item-to-pane-below'
+
+  'cmd-pageup': 'pane:show-next-item'
+  'ctrl-pageup': 'pane:show-next-item'
+  'cmd-pagedown': 'pane:show-previous-item'
+  'ctrl-pagedown': 'pane:show-previous-item'
+
+  'cmd-shift-enter': 'hey-pane:toggle-focus-of-active-pane'
+
+  'cmd-,': 'settings-view:open'

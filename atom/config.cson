@@ -1,0 +1,266 @@
+"*":
+  "activate-power-mode":
+    comboMode:
+      enabled: false
+    particles:
+      colours: {}
+      spawnCount: {}
+    screenShake:
+      enabled: false
+  "atom-beautify":
+    general:
+      _analyticsUserId: "48a09e51-628a-49cb-b9f4-6a584741e60d"
+    js:
+      indent_size: 2
+      keep_array_indentation: true
+  "atom-clock":
+    dateFormat: "h:mm a, YYYY-MM-DD ddd"
+  "atom-ide-ui":
+    hyperclick:
+      darwinTriggerKeys: "ctrlKey"
+    use:
+      "atom-ide-busy-signal": "default"
+      "atom-ide-code-actions": "default"
+      "atom-ide-code-format": "default"
+      "atom-ide-code-highlight": "default"
+      "atom-ide-console": "default"
+      "atom-ide-datatip": "default"
+      "atom-ide-debugger": "default"
+      "atom-ide-definitions": "default"
+      "atom-ide-diagnostics": "default"
+      "atom-ide-diagnostics-ui": "default"
+      "atom-ide-find-references": "default"
+      "atom-ide-global": "default"
+      "atom-ide-outline-view": "default"
+      "atom-ide-signature-help": "default"
+      "atom-ide-terminal": "default"
+      hyperclick: "default"
+  "atom-material-ui":
+    colors:
+      abaseColor: "#8dc149"
+      accentColor: "#8846dd"
+      genAccent: true
+      predefinedColor: "Green"
+    fonts: {}
+    tabs:
+      compactTabs: true
+    treeView:
+      compactList: true
+    ui:
+      animations: false
+      panelContrast: true
+  "atom-package-deps":
+    ignored: []
+  "autocomplete-modules":
+    webpack: true
+  "autocomplete-plus":
+    fileBlacklist: [
+      "*.md"
+      "*.txt"
+    ]
+  "autocomplete-ruby": {}
+  autosave:
+    enabled: true
+  blame: {}
+  "browser-plus":
+    homepage: "www.google.com"
+  "color-tabs": {}
+  core:
+    closeDeletedFileTabs: true
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+      "source.yaml": [
+        "yarn.lock"
+      ]
+    disabledPackages: [
+      "linter-markdown"
+      "metrics"
+      "exception-reporting"
+      "welcome"
+      "background-tips"
+      "language-markdown"
+      "goto"
+      "github"
+      "linter"
+      "autocomplete-ruby"
+      "wrap-guide"
+      "ide-go"
+      "jumpy"
+      "atom-ternjs"
+    ]
+    packagesWithKeymapsDisabled: [
+      "sort-lines"
+      "ruby-block"
+    ]
+    restorePreviousWindowsOnStart: "no"
+    telemetryConsent: "limited"
+    themes: [
+      "seti-ui"
+      "atom-material-syntax-dark"
+    ]
+  "custom-title":
+    template: "<% if (projectName) { %><%= projectName %> - <% } %><% if (gitHead) { %><%= gitHead %> - <% } %><%= fileName %>"
+  docblockr:
+    extend_double_slash: false
+    per_section_indent: true
+  "double-tag": {}
+  editor:
+    fontFamily: "Fira Code"
+    fontSize: 16
+    invisibles: {}
+    preferredLineLength: 120
+    scrollPastEnd: true
+    zoomFontWhenCtrlScrolling: true
+  "exception-reporting":
+    userId: "e1bf4844-e353-738b-e644-a90123c7f801"
+  "file-icons": {}
+  "file-types":
+    "^Dockerfile\\..*$": "source.dockerfile"
+  "flow-ide":
+    executablePath: "yarn run flow"
+  "fuzzy-finder":
+    ignoredNames: [
+      "node_modules"
+    ]
+    searchAllPanes: true
+  "genesis-ui":
+    distractionFree:
+      hideBottom: false
+      hideTabs: false
+  "git-plus":
+    commits:
+      verboseCommits: true
+    general:
+      _analyticsUserId: "985700f5-260d-46ed-9586-3d1178eb428b"
+  "go-plus":
+    autocomplete: {}
+    config: {}
+    panel:
+      displayMode: "closed"
+      focusOnFailure: false
+  "js-hyperclick":
+    extensions: [
+      ".js"
+      ".json"
+      ".node"
+      ".jsx"
+    ]
+  jumpy:
+    fontSize: 1
+  "latex-completions": {}
+  linter: {}
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
+    globalNodePath: "/usr/local"
+    useGlobalEslint: true
+  "linter-flow": {}
+  "linter-rubocop":
+    command: "bundle exec rubocop"
+  "linter-sass-lint":
+    configFile: "~/.sass-lint.yml"
+    globalNodePath: "/usr/local"
+  "linter-ui-default":
+    panelHeight: 56
+    statusBarRepresents: "Current File"
+  "markdown-pdf":
+    border: "0"
+    format: "Letter"
+  "markdown-preview": {}
+  "markdown-themeable-pdf":
+    enableCustomFooter: false
+    enableCustomHeader: false
+    format: "Letter"
+    openPdfInAtomWorkspace: false
+  minimap:
+    plugins:
+      bookmarks: true
+      bookmarksDecorationsZIndex: 0
+      codeglance: true
+      codeglanceDecorationsZIndex: 0
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+  "minimap-codeglance":
+    decorations: false
+    numberOfLines: 20
+  "multi-wrap-guide":
+    columns: [
+      80
+      120
+    ]
+    locked: true
+  pigments:
+    extendAutocompleteToColorValue: true
+    groupPaletteColors: "by file"
+    sortPaletteColors: "by name"
+  "platformio-ide-terminal":
+    style:
+      fontFamily: "Fira Code"
+  qolor: {}
+  "ruby-block":
+    highlightLineNumber: true
+    showBottomPanel: false
+  "seti-syntax":
+    themeColor: "Purple"
+  "seti-ui":
+    compactView: true
+    disableAnimations: true
+    fileIcons: false
+    themeColor: "Green"
+  "spell-check":
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+      "text.md"
+    ]
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    scrollSyncType: "Vertical + Horizontal"
+    syncHorizontalScroll: true
+  tabs: {}
+  "tool-bar":
+    iconSize: "16px"
+    position: "Left"
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
+  wordcount:
+    noextension: true
+".coffee.jsx.source":
+  editor:
+    autoIndent: true
+    preferredLineLength: 120
+".diff":
+  editor:
+    preferredLineLength: 120
+".js.jsx.source":
+  editor:
+    autoIndent: true
+    preferredLineLength: 120
+    showIndentGuide: true
+".plain.text":
+  editor:
+    softWrap: true
+".text.todo":
+  editor:
+    preferredLineLength: 120
+    showInvisibles: false

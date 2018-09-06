@@ -1,0 +1,333 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+@font-family = 'Roboto';
+
+@syntax-color-added: #9CCC65;
+@orange: #e2b93d;
+@red: #EF5350;
+@blue: #4FC3F7;
+@purple: #c893eb;
+
+@seti-green: #8dc149;
+// @seti-green: #9AC526;
+@editor-background: #212121;
+
+atom-workspace {
+  font-family: 'Roboto';
+}
+
+atom-text-editor {
+  font-family: 'Fira Code';
+}
+
+atom-workspace, atom-text-editor {
+  code, kbd, pre {
+    background-color: @seti-green !important;
+    color: black !important;
+  }
+  .modal {
+    width: 800px;
+    margin-left: -400px;
+  }
+}
+
+// style the background color of the tree view
+.tree-view {
+  // background-color: whitesmoke;
+}
+
+// linter-message {
+//   * {
+//     color: black !important;
+//   }
+// }
+
+.tooltip {
+  .tooltip-inner {
+    background-color: @seti-green;
+    font-family: 'Fira Code';
+    color: black;
+    max-width: none;
+  }
+  &.bottom .tooltip-arrow {
+    border-bottom-color: @seti-green;
+  }
+  &.bottom-right .tooltip-arrow {
+    border-bottom-color: @seti-green;
+  }
+  &.bottom-left .tooltip-arrow {
+    border-bottom-color: @seti-green;
+  }
+  &.top .tooltip-arrow {
+    border-top-color: @seti-green;
+  }
+  &.top-right .tooltip-arrow {
+    border-top-color: @seti-green;
+  }
+  &.top-left .tooltip-arrow {
+    border-top-color: @seti-green;
+  }
+  &.left .tooltip-arrow {
+    border-left-color: @seti-green;
+  }
+  &.right .tooltip-arrow {
+    border-right-color: @seti-green;
+  }
+}
+
+atom-text-editor.editor, atom-text-editor, html {
+  atom-text-editor-minimap {
+    //border-left: 1px solid fadeout(@seti-green, 75%);
+    background-color: lighten(@editor-background, 1%);
+    // transition: box-shadow 0.15s;
+    &:hover {
+      // box-shadow: inset 0 0 2px @blue;
+    }
+  }
+
+  minimap-codeglance {
+    box-shadow: 0 0 6px @seti-green;
+  }
+}
+
+.minimap .cursor-line {
+  background: @seti-green;
+}
+
+.jumpy-label {
+  // Regular labels
+  background-color: @seti-green;
+  color: black;
+  border: 1px solid white;
+}
+
+atom-text-editor {
+  // color: white;
+  // background-color: hsl(180, 24%, 12%);
+  text-rendering: optimizeLegibility;
+
+}
+
+//========== Fira Code Font ==========\\
+atom-text-editor.editor .string.quoted,
+atom-text-editor.editor .comment.line,
+atom-text-editor.editor .string.regexp {
+  -webkit-font-feature-settings: "liga" off, "calt" off;
+}
+
+atom-pane {
+  // border: 2px solid fadeout(white, 100%);
+  border-left: 2px fadeout(@seti-green, 75%) solid;
+  // border-right: 1px fadeout(@seti-green, 75%) solid;
+
+}
+
+atom-pane:not(.active) {
+  // opacity: 0.85;
+}
+atom-pane.active {
+  // border-left: 2px fadeout(@seti-green, 25%) solid;
+  .tab-bar {
+    //background-color: fadeout(@seti-green, 75%);
+    .tab.active {
+      background-color: fadeout(@seti-green, 50%);
+    }
+  }
+}
+
+.scrollbars-visible-always {
+  /deep/ ::-webkit-scrollbar {
+    display: none;
+    //width: 0px;
+    //border-color: @seti-green;
+  }
+}
+
+atom-text-editor.editor .highlight-selected .region {
+  // background-color: fadeout(white, 80%) !important;
+  border-color: @seti-green !important;
+}
+
+atom-text-editor.editor .bracket-matcher .region {
+    border: 1px solid @red;
+    // border: 1px solid fadeout(@seti-green, 40%);
+    background-color: fadeout(@seti-green, 80%);
+    box-sizing: border-box;
+  }
+
+.indent-guide-improved {
+  background-color: gray;
+  &.indent-guide-stack {
+    background-color: fade(@seti-green, 50%);
+    &.indent-guide-active {
+      background-color: @seti-green;
+    }
+  }
+}
+
+atom-text-editor.editor .wrap-guide {
+  width: 1px;
+  background-color: fadeout(@seti-green, 90%);
+}
+
+
+atom-text-editor.editor .cursor {
+   border-color: @seti-green;
+}
+
+atom-text-editor.editor .gutter .line-number {
+  color: fadeout(white, 75%);
+  background-color: inherit;
+  &.cursor-line {
+    color: @seti-green;
+  }
+}
+
+atom-text-editor.editor {
+  .highlights .ruby-block-highlight .region {
+    background-color: fadeout(@purple, 70%);
+  }
+  .line-number.ruby-block-highlight {
+   color: @purple;
+   background-color: fadeout(@purple, 70%);
+ }
+}
+
+// atom-text-editor:not(.mini)::shadow .text.plain {
+//   color: @hue-6;
+// }
+
+.spell-check-corrections {
+  .list-group {
+    color: white;
+    li {
+      padding: 0 10px;
+    }
+    .selected::before {
+      background: none !important;
+    }
+    .selected {
+      background: @seti-green !important;
+    }
+  }
+}
+
+// .markdown-preview {
+//   background-color: @editor-background;
+//   margin: 30px;
+//
+//   color: #9BAFB8;
+//   h1, h2, h3, h4, h5 {
+//     color: white;
+//   }
+//   blockquote {
+//     background-color: #2B2B2B;
+//   }
+//   .editor-colors, code {
+//     color: white;
+//     text-rendering: optimizeLegibility;
+//     -webkit-font-feature-settings: "liga" on, "calt" on;
+//     font-family: "Fira Code";
+//     background-color: #2B2B2B;
+//   }
+//   code {
+//
+//   }
+// }
+
+.tool-bar {
+  transition: opacity 0.15s, border-color 0.15s;
+  // background-color: @seti-green;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+    // box-shadow: inset 0 0 10px @seti-green
+    border-color: @seti-green;
+  }
+  button {
+    background: none !important;
+    opacity: 0.85;
+    &:active {
+      opacity: 1;
+    }
+  }
+}
+
+.charcode-display {
+  color: @seti-green;
+}
+
+.atom-clock {
+  color: @blue;
+}
+
+tablr-editor {
+  tablr-cell, tablr-gutter-cell, tablr-header-cell {
+    &.selected, &.active, &.active-row, &.active-column {
+      color: @seti-green !important;
+    }
+  }
+  .ellipsis-display {
+    color: @seti-green !important;
+  }
+}
+
+atom-text-editor .blame-gutter {
+  .hash   { color: @purple; }
+  .date   { color: @seti-green; }
+  .author { color: @orange; }
+}
+
+
+//========== 3D Effects ==========\\
+#atom-perspective() {
+
+  @viewing-distance: 12in;
+  @rotation: 20deg;
+
+  // .tree-view-scroller {
+  //   transform: perspective(@viewing-distance) rotateY(20deg);
+  //   transform-origin: left;
+  //   width: 120%;
+  // }
+  // atom-text-editor.editor .gutter {
+  //   transform: perspective(@viewing-distance) rotateY(30deg);
+  //   transform-origin: left;
+  //   width: 120%;
+  // }
+  body /deep/ atom-text-editor-minimap {
+    transform: perspective(@viewing-distance) rotateY(-@rotation) scaleX(1.1);
+    transform-origin: right;
+  }
+
+}
+#atom-perspective;
+
+.character-table {
+  .two-lines {
+    height: auto !important;
+  }
+  .ct-char {
+    // font-size: 100% !important;
+  }
+}
+
+atom-text-editor.editor {
+  .multi-wrap-guide:nth-child(1) .multi-wrap-guide-line {
+    background-color: fadeout(white, 95%);
+    width: 1px;
+  }
+  .multi-wrap-guide:nth-child(2) .multi-wrap-guide-line {
+    background-color: fadeout(@red, 60%);
+    width: 1px;
+  }
+}

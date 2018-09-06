@@ -1,0 +1,64 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "commonjs": true
+  },
+  "extends": [
+    "liveramp"
+  ],
+  "globals": {
+    "_": true,
+    "React": true,
+    "ReactDOM": true,
+    "update": true,
+    "Redux": true,
+    "ReactRedux": true,
+    "ReactBootstrap": true,
+    "classNames": true,
+    "$": true,
+    "gon": true
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": ["error", "unix"],
+    "max-len": ["warn", 120],
+    "no-plusplus": "off",
+    "no-unused-vars": "warn",
+    "no-use-before-define": ["error", "nofunc"],
+    "radix": ["error", "as-needed"],
+    "react/jsx-uses-vars": [2],
+    "react/jsx-boolean-value": ["error", "always"],
+    "react/prefer-es6-class": ["warn", "never"],
+    "react/prop-types": "warn",
+    "react/sort-comp": [
+      "error",
+      {
+        "order": [
+          "static-methods",
+          "lifecycle",
+          "render",
+          "everything-else"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    }
+  }
+}

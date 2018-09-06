@@ -1,0 +1,75 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+{
+    "key": "shift+cmd+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus"
+},{
+    "key": "alt+right",
+    "command": "cursorWordPartRight",
+    "when": "editorTextFocus"
+},{
+    "key": "alt+left",
+    "command": "cursorWordPartLeft",
+    "when": "editorTextFocus"
+},{
+    "key": "shift+cmd+backspace",
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus"
+},{
+    "key": "ctrl+;",
+    "command": "extension.trailing-semicolon",
+    "when": "editorTextFocus"
+},{
+    "key": "cmd+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus"
+},{
+    "key": "cmd+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus"
+},{
+    "key": "ctrl+,",
+    "command": "extension.appendComma",
+    "when": "editorTextFocus"
+},{
+    "key": "shift+cmd+right",
+    "command": "cursorWordRightSelect",
+    "when": "editorTextFocus"
+},{
+    "key": "cmd+backspace",
+    "command": "deleteWordLeft",
+    "when": "editorTextFocus"
+},{
+    "key": "shift+cmd+left",
+    "command": "cursorWordLeftSelect",
+    "when": "editorTextFocus"
+},{
+    "key": "alt+backspace",
+    "command": "deleteWordPartLeft",
+    "when": "editorTextFocus"
+},{
+    "key": "alt+delete",
+    "command": "deleteWordPartRight",
+    "when": "editorTextFocus"
+},{
+    "key": "shift+alt+left",
+    "command": "cursorWordPartLeftSelect",
+    "when": "editorTextFocus"
+},{
+    "key": "shift+alt+right",
+    "command": "cursorWordPartRightSelect",
+    "when": "editorTextFocus"
+},{
+    "key": "cmd+right",
+    "command": "cursorWordRight",
+    "when": "editorTextFocus"
+},{
+    "key": "cmd+left",
+    "command": "cursorWordLeft",
+    "when": "editorTextFocus"
+},{
+    "key": "cmd+'",
+    "command": "extension.selectEitherQuote",
+    "when": "editorTextFocus"
+},]

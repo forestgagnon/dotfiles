@@ -1,0 +1,38 @@
+{
+    "editor.fontFamily": "Fira Code",
+    "files.autoSave": "onFocusChange",
+    "window.zoomLevel": 1,
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Material Syntax - Dark",
+    "workbench.colorCustomizations": {
+        "editorIndentGuide.background": "#ffffff38",
+        "editorIndentGuide.activeBackground": "#ffffff77",
+        "editorRuler.foreground": "#ff000048",
+        "terminal.ansiBlack": "#212120",
+        "terminal.ansiBrightBlack": "#212120",
+        "terminal.ansiRed": "#ef524f",
+        "terminal.ansiBrightRed": "#ef524f",
+        "terminal.ansiGreen": "#88d530",
+        "terminal.ansiBrightGreen": "#88d530",
+        "terminal.ansiYellow": "#e4b72d",
+        "terminal.ansiBrightYellow": "#e4b72d",
+        "terminal.ansiBlue": "#4fc3f7",
+        "terminal.ansiBrightBlue": "#4fc3f7",
+        "terminal.ansiMagenta": "#c892ea",
+        "terminal.ansiBrightMagenta": "#c892ea",
+        "terminal.ansiCyan": "#89ddf3",
+        "terminal.ansiBrightCyan": "#89ddf3",
+        "terminal.ansiWhite": "#fdf6e2",
+        "terminal.ansiBrightWhite": "#fdf6e2",
+        "terminal.foreground": "#98a9b2",
+        "terminal.foreground": "#98a9b2",
+    },
+    "editor.tabSize": 2,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "terminal.integrated.fontFamily": "FuraCode Nerd Font",
+    "terminal.integrated.cursorStyle": "underline",
+    "gitlens.codeLens.enabled": false
+}
