@@ -1,7 +1,7 @@
 {
     "editor.fontFamily": "Fira Code",
     "files.autoSave": "onFocusChange",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 2,
     "editor.fontLigatures": true,
     "workbench.colorTheme": "Material Syntax - Dark",
     "workbench.colorCustomizations": {
@@ -34,5 +34,7 @@
     ],
     "terminal.integrated.fontFamily": "FuraCode Nerd Font",
     "terminal.integrated.cursorStyle": "underline",
-    "gitlens.codeLens.enabled": false
+    "gitlens.codeLens.enabled": false,
+    "workbench.editor.labelFormat": "medium",
+    "breadcrumbs.enabled": true
 }
