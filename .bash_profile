@@ -3,6 +3,8 @@ bashcompinit
 
 source ~/.forest_supersecret_liveramp_specific_bash_profile
 
+export GPG_TTY=$(tty)
+
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
