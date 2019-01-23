@@ -196,6 +196,7 @@ alias lh='localhost-launcher'
 
 ########## DOCKER / KUBERNETES ##########
 alias kp='kparanoid'
+alias asciidoctor-pdf='docker run -i -a stdin -a stdout -w /opt/ -v $(pwd):/opt/ --rm alexsuch/asciidoctor asciidoctor-pdf'
 
 ########## SYSTEM ##########
 grep-and-kill-pid() { ps aux | grep ${@:1} | yank | xargs kill -9; }
@@ -205,3 +206,5 @@ alias hosts='sudo vim /etc/hosts'
 alias flushdns='sudo killall -HUP mDNSResponder && sudo dscacheutil -flushcache'
 
 watchdir() { fswatch -o ${1} | xargs -n1 -I{} ${@:2}; }
+
+export PATH="$HOME/.cargo/bin:$PATH"
