@@ -196,7 +196,7 @@ alias lh='localhost-launcher'
 
 ########## DOCKER / KUBERNETES ##########
 alias kp='kparanoid'
-alias asciidoctor-pdf='docker run -i -w /opt/ -v $(pwd):/opt/ --rm asciidoctor/docker-asciidoctor asciidoctor-pdf --safe-mode safe'
+alias asciidoctor-pdf='docker run -it -v $(pwd):/documents/ --rm asciidoctor/docker-asciidoctor asciidoctor-pdf --safe-mode safe'
 
 ########## SYSTEM ##########
 grep-and-kill-pid() { ps aux | grep ${@:1} | yank | xargs kill -9; }
