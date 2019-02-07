@@ -196,6 +196,7 @@ alias lh='localhost-launcher'
 
 ########## DOCKER / KUBERNETES ##########
 alias kp='kparanoid'
+alias kill-context='kubectl config get-contexts | yank | xargs kubectl config delete-context && kubectl config use-context docker-for-desktop'
 alias asciidoctor-pdf='docker run -it -v $(pwd):/documents/ --rm asciidoctor/docker-asciidoctor asciidoctor-pdf --safe-mode safe'
 
 ########## SYSTEM ##########
