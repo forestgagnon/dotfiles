@@ -446,7 +446,7 @@ local goBig = {x = 0, y = 0, w = gw, h = gh}
 local layoutMainCoding = {
   { appData = "Atom", place = {1, {x = 0, y = 0, h = 15, w = 28}} },
   { appData = "Atom Beta", place = {1, {x = 0, y = 0, h = 15, w = 28}} },
-  { appData = "Code", place = {1, {x = 0, y = 0, h = 15, w = 28}} },
+  { appData = "Code", place = {1, {x = 0, y = 0, h = 15, w = gw}} },
   { appData = "iTerm2", place = {1, {x = 0, y = 15, h = 3, w = 36}} },
   { appData = {appName = "iTerm2", title = "!!PRODUCTION*"}, place = {1, {x = 28, y = 0, h = 15, w = 8}} },
   { appData = {appName = "iTerm2", title = "!!DEPLOY*"}, place = {1, {x = 28, y = 0, h = 15, w = 8}} },
