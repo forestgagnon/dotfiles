@@ -209,3 +209,26 @@ alias flushdns='sudo killall -HUP mDNSResponder && sudo dscacheutil -flushcache'
 watchdir() { fswatch -o ${1} | xargs -n1 -I{} ${@:2}; }
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+cloudbuildwatch() {
+  gcloud builds list "$@" | grep WORKING | yank | xargs gcloud builds log --stream
+}
+
+
+# Docker image runners
+
+dockeri() {
+  docker run --rm -it "$@"
+}
+
+alpine() {
+  dockeri "$@" alpine
+}
+
+alpine-pwd() {
+  alpine --workdir=/mountdir -v "$PWD:/mountdir" "$@"
+}
+
+ubuntu() {
+  dockeri "$@" ubuntu
+}
