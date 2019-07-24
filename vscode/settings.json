@@ -37,5 +37,6 @@
     "breadcrumbs.enabled": true,
     "files.autoSave": "onFocusChange",
     "explorer.confirmDragAndDrop": false,
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "go.formatTool": "goimports"
 }

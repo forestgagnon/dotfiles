@@ -211,7 +211,7 @@ watchdir() { fswatch -o ${1} | xargs -n1 -I{} ${@:2}; }
 export PATH="$HOME/.cargo/bin:$PATH"
 
 cloudbuildwatch() {
-  gcloud builds list "$@" | grep WORKING | yank | xargs gcloud builds log --stream
+  gcloud builds list "$@" | grep WORKING | yank | xargs gcloud builds log --stream "$@"
 }
 
 
