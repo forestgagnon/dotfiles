@@ -214,6 +214,10 @@ cloudbuildwatch() {
   gcloud builds list "$@" | grep WORKING | yank | xargs gcloud builds log --stream "$@"
 }
 
+tmp() {
+  cd $(mktemp -d)
+}
+
 
 # Docker image runners
 
