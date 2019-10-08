@@ -8,7 +8,7 @@ export GPG_TTY=$(tty)
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
-export GOROOT=`go env GOROOT`
+export GOROOT=$(go env GOROOT)
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 export PATH=$PATH:$GOBIN
@@ -157,15 +157,11 @@ alias ..='cdl ../'
 alias cls='clear'
 alias f='open -a Finder ./'
 # alias lsl='CLICOLOR_FORCE=1 ls -alG | less -R'
-alias lsl='exa -albghH --git'
-alias ls='exa -a'
+alias lsall='exa -albghH --git'
+alias ls='exa'
 
 ########## META ##########
 alias bpreload='source ~/.bash_profile'
-
-########## RAILS ##########
-alias rc='bundle exec rails c'
-alias rcfuck='spring stop && bundle exec rails c'
 
 ########## PYTHON ##########
 pyserv() {
@@ -177,22 +173,11 @@ pyserv() {
   fi
 }
 
-########## BUNDLE ##########
-alias be='bundle exec'
-alias bi='bundle install --jobs 30'
-alias bu='bundle update'
-
-
-########## MISC ##########
-alias v='vim'
-
 dummy-file() { dd if=/dev/zero of="$1" bs="$2" count=1;}
 
 ########## URL LAUNCHERS ##########
 
-localhost-launcher() { open "http://localhost:$1"; }
-alias lh='localhost-launcher'
-
+lh() { open "http://localhost:$1"; }
 
 ########## DOCKER / KUBERNETES ##########
 alias kp='kparanoid'
@@ -202,7 +187,6 @@ alias asciidoctor-pdf='docker run -it -v $(pwd):/documents/ --rm asciidoctor/doc
 ########## SYSTEM ##########
 grep-and-kill-pid() { ps aux | grep ${@:1} | yank | xargs kill -9; }
 alias kl='grep-and-kill-pid'
-alias kl9='kill -9'
 alias hosts='sudo vim /etc/hosts'
 alias flushdns='sudo killall -HUP mDNSResponder && sudo dscacheutil -flushcache'
 
