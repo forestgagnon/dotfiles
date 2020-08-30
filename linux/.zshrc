@@ -40,3 +40,9 @@ alias gs='git status'
 alias gap='git add -p'
 alias gcm='git commit -m'
 eval "$(zoxide init zsh)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/forest/google-cloud-sdk/path.zsh.inc' ]; then . '/home/forest/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/forest/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/forest/google-cloud-sdk/completion.zsh.inc'; fi
