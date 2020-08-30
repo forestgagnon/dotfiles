@@ -20,6 +20,7 @@ bindkey "$key[Down]" down-line-or-beginning-search
 
 source "$HOME/theme.zsh"
 
+export PATH=$PATH:/usr/local/go/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/kitty.app/bin:$PATH"
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
@@ -32,3 +33,4 @@ export GPG_TTY=$(tty)
 
 alias gs='git status'
 alias gap='git add -p'
+alias gcm='git commit -m'
