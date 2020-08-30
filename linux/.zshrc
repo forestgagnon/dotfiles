@@ -39,3 +39,4 @@ export GPG_TTY=$(tty)
 alias gs='git status'
 alias gap='git add -p'
 alias gcm='git commit -m'
+eval "$(zoxide init zsh)"
