@@ -20,7 +20,7 @@ bindkey "$key[Down]" down-line-or-beginning-search
 
 source "$HOME/theme.zsh"
 
-
+export PATH=$PATH:/usr/local/go/bin
 export GOROOT=$(go env GOROOT)
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
