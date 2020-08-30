@@ -30,6 +30,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/kitty.app/bin:$PATH"
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
+export N_PREFIX=$HOME/.n
+export PATH="$PATH:$N_PREFIX/bin"
+
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
