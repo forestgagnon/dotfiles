@@ -13,16 +13,11 @@ export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 export PATH=$PATH:$GOBIN
 
-########## ZSH WIDGET SETUP ##########
-redraw-prompt() { zle reset-prompt; }
-zle -N redraw-prompt
-bindkey '^[x' execute-named-cmd # just make sure this is bound, should be by default though
-
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 alias k='kubectl --context=docker-for-desktop'
-source <(stern --completion=zsh)
 source <(kubectl completion zsh)
+eval "$(zoxide init zsh --no-aliases)"
 
 ########## MISC FUNCTIONS ##########
 strip-color() { sed $'s,\x1b\\[[0-9;]*[a-zA-Z],,g'; } # Pipe output to this to remove color codes
@@ -36,12 +31,9 @@ alias gcm='git commit -m'
 alias gpsh='git push'
 alias gdf='git diff'
 alias gb="git for-each-ref --sort=committerdate refs/heads/ --format='%(color:magenta bold blink)%(HEAD)%(color:reset) %(color:white bold)%(refname:short)%(color:reset) %(color:cyan)%(objectname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset)) %(color:normal dim)%(contents:subject)%(color:reset)'"
-alias greb='git rebase'
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gwip="git commit -m 'wip'"
-alias ghash="(git log | head -1| grep -oE '\w{40}' | perl -ne 'chomp and print' | pbcopy) && (git log | head -6)"
 alias gdu="git checkout -- ." # Discard all unstaged changes
-alias gdlb='git branch -D'
 gireb() { git rebase -i HEAD~"$1"; }
 git-current-branch() { git rev-parse --abbrev-ref HEAD | tr -d '\n'; }
 git-recent-branches() { git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"; }
@@ -156,12 +148,7 @@ cdl () { cd ${1} && exa -a ${@:2}; }
 alias ..='cdl ../'
 alias cls='clear'
 alias f='open -a Finder ./'
-# alias lsl='CLICOLOR_FORCE=1 ls -alG | less -R'
 alias lsall='exa -albghH --git'
-alias ls='exa'
-
-########## META ##########
-alias bpreload='source ~/.bash_profile'
 
 ########## PYTHON ##########
 pyserv() {
