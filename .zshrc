@@ -102,3 +102,5 @@ if [ -f '/Users/fgagno/google-cloud-sdk/completion.zsh.inc' ]; then source '/Use
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/hashicorp_vault vault
+
+source /Users/fgagno/.config/broot/launcher/bash/br

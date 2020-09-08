@@ -93,5 +93,6 @@
             "value": "#42b883"
         }
     ],
-    "liveshare.featureSet": "insiders"
+    "liveshare.featureSet": "insiders",
+    "go.useLanguageServer": true
 }

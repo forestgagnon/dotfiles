@@ -220,3 +220,5 @@ alpine-pwd() {
 ubuntu() {
   dockeri "$@" ubuntu
 }
+
+source /Users/fgagno/.config/broot/launcher/bash/br
