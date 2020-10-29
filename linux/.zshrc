@@ -42,6 +42,9 @@ export GPG_TTY=$(tty)
 alias gs='git status'
 alias gap='git add -p'
 alias gcm='git commit -m'
+alias gwip='git commit -m "wip"'
+alias gpsh='git push'
+alias up='git pull --rebase'
 eval "$(zoxide init zsh)"
 
 # The next line updates PATH for the Google Cloud SDK.
