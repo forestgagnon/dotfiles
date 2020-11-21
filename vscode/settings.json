@@ -1,6 +1,6 @@
 {
     "editor.fontFamily": "Fira Code",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "editor.fontLigatures": true,
     "workbench.colorTheme": "Material Syntax - Dark",
     "workbench.colorCustomizations": {
@@ -94,5 +94,10 @@
         }
     ],
     "liveshare.featureSet": "insiders",
-    "go.useLanguageServer": true
+    "go.useLanguageServer": true,
+    "extensions.ignoreRecommendations": false,
+    "explorer.confirmDelete": false,
+    "cSpell.userWords": [
+        "externalizable"
+    ]
 }
