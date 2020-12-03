@@ -444,20 +444,13 @@ local goBig = {x = 0, y = 0, w = gw, h = gh}
 -- }
 
 local layoutMainCoding = {
-  { appData = "Atom", place = {1, {x = 0, y = 0, h = 15, w = 28}} },
-  { appData = "Atom Beta", place = {1, {x = 0, y = 0, h = 15, w = 28}} },
   { appData = "Code", place = {1, {x = 0, y = 0, h = 15, w = gw}} },
   { appData = "iTerm2", place = {1, {x = 0, y = 15, h = 3, w = 36}} },
-  { appData = {appName = "iTerm2", title = "!!PRODUCTION*"}, place = {1, {x = 28, y = 0, h = 15, w = 8}} },
-  { appData = {appName = "iTerm2", title = "!!DEPLOY*"}, place = {1, {x = 28, y = 0, h = 15, w = 8}} },
-  { appData = {appName = "iTerm2", title = "SIDE*"}, place = {1, {x = 28, y = 0, h = 15, w = 8}} },
   -- { appData = "Google Chrome", place = {2, {x = 12, y = 6, h = 12, w = 24}} },
   -- { appData = "Google Chrome", place = {3, {x = 0, y = 0, h = 18, w = 36}}, onlyFocused = true},
 }
 
 local layoutMainCodingChrome = {
-  { appData = "Atom", place = {1, {x = 0, y = 0, h = 15, w = 26}} },
-  { appData = "Atom Beta", place = {1, {x = 0, y = 0, h = 15, w = 26}} },
   { appData = "Code", place = {1, {x = 0, y = 0, h = 15, w = 26}} },
   { appData = "iTerm2", place = {1, {x = 0, y = 15, h = 3, w = 36}} },
   { appData = "Google Chrome", place = {1, {x = 26, y = 0, h = 15, w = 10}}, onlyFocused = true },
@@ -476,8 +469,6 @@ local layoutLaptopCodingLowRes = {
 }
 
 local layoutNonCoding = {
-  { appData = "Atom", place = {2, {x = 0, y = 0, h = 15, w = 36}} },
-  { appData = "Atom Beta", place = {2, {x = 0, y = 0, h = 15, w = 36}} },
   { appData = "Code", place = {2, {x = 0, y = 0, h = 15, w = 36}} },
   { appData = "iTerm2", place = {2, {x = 0, y = 15, h = 3, w = 36}} },
   -- { appData = "Google Chrome", place = {1, {x = 12, y = 9, h = 9, w = 12}} },
@@ -511,11 +502,14 @@ definitions = {
   ['pad4'] = gridset(goLeft),
   ['pad6'] = gridset(goRight),
 
+  ['pad0'] = gridset({x = 0, y = gh - (gh / 5), w = gw, h = gh / 5}),
+  ['pad.'] = gridset({x = 0, y = 0, w = gw, h = 4 * (gh / 5)}),
+
   -- ["pad/"] = function() alert.show(serializeTable(grid.get(window.focusedWindow())), 5) end,
-  a = applyLayout(array_concat(layoutMainCoding, layoutLaptopCodingNativeRes), "Main Coding"),
-  q = applyLayout(array_concat(layoutMainCoding, layoutLaptopCodingLowRes), "Main Coding (Low-res Laptop)"),
-  z = applyLayout(layoutMainCodingChrome, "Main Coding Chrome"),
-  w = applyLayout(layoutNonCoding, "Non Coding"),
+  -- a = applyLayout(array_concat(layoutMainCoding, layoutLaptopCodingNativeRes), "Main Coding"),
+  -- q = applyLayout(array_concat(layoutMainCoding, layoutLaptopCodingLowRes), "Main Coding (Low-res Laptop)"),
+  -- z = applyLayout(layoutMainCodingChrome, "Main Coding Chrome"),
+  -- w = applyLayout(layoutNonCoding, "Non Coding"),
 
   [";"] = grid.pushWindowNextScreen,
   ["'"] = grid.pushWindowPrevScreen,
@@ -574,7 +568,7 @@ overlay1Showing = false
 
 function createOtherHotkeys(hyperKeyStub)
   hotkey.new({"ctrl-cmd-shift"}, "space", function() hs.application.find("iTerm2"):mainWindow():focus() end):enable()
-  hotkey.new({"ctrl-cmd-shift"}, "a", function() hs.application.find("Atom"):mainWindow():focus() end):enable()
+  hotkey.new({"ctrl-cmd-shift"}, "c", function() hs.application.find("Code"):mainWindow():focus() end):enable()
   hotkey.new({"ctrl-cmd-shift"}, "s", function() hs.application.find("Slack"):mainWindow():focus() end):enable()
   hotkey.new({"ctrl-cmd-shift"}, "\\", function() hs.application.find("Google Chrome"):mainWindow():focus() end):enable()
 
@@ -583,7 +577,7 @@ function createOtherHotkeys(hyperKeyStub)
   hotkey.new({"ctrl-cmd-shift"}, "up", function() hs.window.filter.new():focusWindowNorth() end):enable()
   hotkey.new({"ctrl-cmd-shift"}, "down", function() hs.window.filter.new():focusWindowSouth() end):enable()
 
-  local chromeSwitcher = hs.window.switcher.new{'Safari','Google Chrome'}
+  local chromeSwitcher = hs.window.switcher.new{'Google Chrome'}
   hotkey.bind('alt', 'tab', function() chromeSwitcher:next() end)
   hotkey.bind('alt-shift', 'tab', function() chromeSwitcher:previous() end)
 
