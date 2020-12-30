@@ -15,7 +15,7 @@ export PATH=$PATH:$GOBIN
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-alias k='kubectl --context=docker-for-desktop'
+alias k='kubectl --context=docker-desktop'
 source <(kubectl completion zsh)
 eval "$(zoxide init zsh --no-aliases)"
 
