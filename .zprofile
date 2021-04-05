@@ -11,12 +11,14 @@ HISTFILE="$HOME/.zsh_history"
 HISTSIZE=1000000
 SAVEHIST=1000000
 
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
-bindkey "$key[Up]" up-line-or-beginning-search
-bindkey "$key[Down]" down-line-or-beginning-search
+# bindkey "$key[Up]" up-line-or-beginning-search
+# bindkey "$key[Down]" down-line-or-beginning-search
 
 export PATH=$PATH:/usr/local/go/bin
 export GOROOT=$(go env GOROOT)
