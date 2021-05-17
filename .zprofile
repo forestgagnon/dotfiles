@@ -32,8 +32,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export N_PREFIX=$HOME/.n
 export PATH="$PATH:$N_PREFIX/bin"
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 export GPG_TTY=$(tty)
 
 alias k='kubectl --context=docker-desktop'
