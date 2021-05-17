@@ -1,3 +1,4 @@
+source ~/code/forestgagnon/dotfiles/zsh-themes/forest-mac.zsh-theme
 export SHELL=$(which zsh)
 setopt EXTENDED_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
