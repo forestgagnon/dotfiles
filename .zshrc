@@ -199,3 +199,5 @@ alpine-pwd() {
 ubuntu() {
   dockeri "$@" ubuntu
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
