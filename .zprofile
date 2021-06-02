@@ -164,7 +164,7 @@ alias f='open -a Finder ./'
 
 ########## DOCKER / KUBERNETES ##########
 alias kp='kparanoid'
-alias kill-context='kubectl config get-contexts | yank | xargs kubectl config delete-context && kubectl config use-context docker-for-desktop'
+alias kill-context='kubectl config get-contexts | yank | xargs kubectl config delete-context && kubectl config use-context docker-desktop'
 
 ########## SYSTEM ##########
 grep-and-kill-pid() { ps aux | grep ${@:1} | yank | xargs kill -9; }
