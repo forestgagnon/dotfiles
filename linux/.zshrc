@@ -35,6 +35,7 @@ export PATH="$PATH:$N_PREFIX/bin"
 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export GPG_TTY=$(tty)
 
