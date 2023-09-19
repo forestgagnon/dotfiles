@@ -173,7 +173,7 @@ alias hosts='sudo vim /etc/hosts'
 alias flushdns='sudo killall -HUP mDNSResponder && sudo dscacheutil -flushcache'
 
 cloudbuildwatch() {
-  gcloud builds list "$@" | grep WORKING | yank | xargs gcloud builds log --stream "$@"
+  gcloud builds list "$@" | grep 'WORKING\|QUEUED' | yank | xargs gcloud builds log --stream "$@"
 }
 
 tmp() {
